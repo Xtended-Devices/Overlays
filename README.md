@@ -212,7 +212,14 @@ Note that nodes availability depends on kernel version
 Example
 -------
 
-<!-- Battery Health -->
         <string name="config_batDesCap">/sys/class/power_supply/bms/charge_full_design</string>
         <string name="config_batCurCap">/sys/class/power_supply/bms/charge_now_raw</string>
         <string name="config_batChargeCycle">/sys/class/power_supply/bms/cycle_count</string>
+
+You can also disable battery health section if you could not find a reliable node in your kernel
+
+Example
+-------
+
+<!-- Battery Health -->
+        <bool name="config_supportBatteryHealth">false</bool>
