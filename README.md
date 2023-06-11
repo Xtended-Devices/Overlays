@@ -40,21 +40,32 @@ TARGET_ENABLE_BLUR := true
 <bool name="config_supportScreenOffUdfps">true</bool>
 ```
 
-:point_right: **If your device has variable refresh rate**
+:point_right: **If your device has variable screen resolution**
 ```
 <!-- Enforce DisplayModeDirector to select user preferred resolution -->
 <bool name="config_forceToUseSelectedResolution">true</bool>
-
+```
+:point_right: **If your device has variable refresh rate**
+```
 <!-- The default peak refresh rate for a given device.  -->
 <integer name="config_defaultPeakRefreshRate">120</integer>
 
 *Change 120 to max refresh rate of your device.
 ```
 
+
+:point_right: **If your device has LinearmotorVibrator**
+```
+<!-- Mock Oplus LinearmotorVibratorService -->
+<bool name="config_mockOplusLinearmotorVibratorService">true</bool>
+```    
 #
 :point_right: **Add into** *overlay/frameworks/base/packages/SystemUI/res/values/config.xml*
 
 ```    
+<!-- Whether the combined qs shows in status bar -->
+<bool name="flag_combined_qs_headers">false</bool>
+
 <!-- StatusBar burn-in protection -->
 <bool name="config_disableStatusBarBurnInProtection">true</bool>
 
